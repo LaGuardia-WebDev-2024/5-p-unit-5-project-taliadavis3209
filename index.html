@@ -1,6 +1,6 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
+[ yup ] <div> and <span>
 [ yup ] border:, margin:, and padding: 
 [ yup ] Three Images
 
@@ -18,7 +18,7 @@ Select TWO Additional Features to Add
 <html>
 
 <head>
-  <title>West Side Story invite</title>
+  <title>West Side Story</title>
   <meta charset="utf-8">
   <style>
 .flip-card {
@@ -31,7 +31,6 @@ Select TWO Additional Features to Add
   border-style: dotted;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -40,13 +39,9 @@ Select TWO Additional Features to Add
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -54,18 +49,18 @@ Select TWO Additional Features to Add
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
-
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #a18775;
   color: black;
 }
-
-/* Style the back side */
 .flip-card-back {
   background-color: rgb(51, 12, 12);
   color: rgb(145, 128, 106);
   transform: rotateY(180deg);
+}
+.ws {
+  color: brown;
+  font-style: italic;
 }
   </style>
 </head>
@@ -76,7 +71,7 @@ Select TWO Additional Features to Add
       <img src="https://juniortheatre.com/wp-content/uploads/2019/07/2020-West-Side-Story-logo.jpg" alt="West" style="width:600px;height:600px;">
     </div>
     <div class="flip-card-back">
-      <h2>You Are Invited To The Laguardia Production Of West Side Story</h2>
+      <h2>You Are Invited To The Laguardia Production Of  <span class=ws>West Side Story</span></h2>
       <img src="https://cdn-clients.tix.com/699/productions/wss%20poster_1761331002.png" alt="WSS" width="250">
       <p></p>
     </div>

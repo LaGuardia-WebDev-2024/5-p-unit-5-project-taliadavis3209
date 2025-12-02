@@ -1,16 +1,16 @@
 <!-- Unit 5 Project
 Requirements
-[  ] <div> and <span>
-[  ] border:, margin:, and padding: 
-[  ] Three Images
+[ yup ] <div> and <span>
+[ yup ] border:, margin:, and padding: 
+[ yup ] Three Images
 
 Select TWO Additional Features to Add  
 [ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
+[ yup ] Feature 2 - Flip Card
 [ no ] Feature 3 - Animation
 [ no ] Feature 4 - Linear Gradient
 [ no ] Feature 5 - Use a .Gif
-[ no ] Feature 6 - Unique Border Styles
+[ yup ] Feature 6 - Unique Border Styles
 -->
 
 
@@ -18,15 +18,68 @@ Select TWO Additional Features to Add
 <html>
 
 <head>
-  <title>Unit 5 Project</title>
+  <title>West Side Story</title>
   <meta charset="utf-8">
   <style>
+.flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 600px;
+  border: 10px solid #701711;
+  padding: 10px; 
+  margin: 30px;
+  border-bottom: 10px dotted #701711;
+  border-top: 10px dotted #701711;
+  border-left: 10px dashed #000000;
+  border-right: 10px dashed #000000;
 
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #a18775;
+  color: black;
+}
+.flip-card-back {
+  background-color: rgb(51, 12, 12);
+  color: rgb(145, 128, 106);
+  transform: rotateY(180deg);
+}
+.ws {
+  color: brown;
+  font-style: italic;
+}
   </style>
 </head>
-<body>
-
- 
-
+<body style='background-image: url(https://usbrick.com/wp-content/uploads/2024/11/Ivory-Mortar-1.jpg);'> 
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://juniortheatre.com/wp-content/uploads/2019/07/2020-West-Side-Story-logo.jpg" alt="West" style="width:600px;height:600px;">
+    </div>
+    <div class="flip-card-back">
+      <h2>You Are Invited To The Laguardia Production Of  <span class=ws>West Side Story</span></h2>
+      <img src="https://cdn-clients.tix.com/699/productions/wss%20poster_1761331002.png" alt="WSS" width="250">
+      <p></p>
+    </div>
+  </div>
+</div>
 </body>
 </html>
